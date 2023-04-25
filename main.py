@@ -1,3 +1,4 @@
+import csv
 
 def opcion1(lista):
     print("Has seleccionado la opción 1.")
@@ -16,6 +17,11 @@ def opcion5():
 
 def menu():
 
+    with open('train_and_test2.csv') as archivo_csv:
+        lector_csv = csv.reader(archivo_csv, delimiter=',')
+        lista_datos = []
+        for fila in lector_csv:
+            lista_datos.append(fila)
     
     print("Seleccione una opción:")
     print("1. Hombres mayores de 17")
