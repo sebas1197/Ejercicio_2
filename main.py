@@ -1,7 +1,11 @@
 import csv
 
 def opcion1(lista):
-    print("Has seleccionado la opción 1.")
+    contador = 0
+    for i in lista:
+        if i[1] > '17' and i[3] == '1': #se asume que 1 es hombre
+            contador += 1
+    print("La cantidad de hombres mayores de 17 es: ", contador)
 
 def opcion2():
     print("Has seleccionado la opción 2.")
