@@ -7,8 +7,12 @@ def opcion1(lista):
             contador += 1
     print("La cantidad de hombres mayores de 17 es: ", contador)
 
-def opcion2():
-    print("Has seleccionado la opción 2.")
+def opcion2(lista):
+    contador = 0
+    for i in lista:
+        if i[1] > '17' and i[3] == '0': #se asume que 1 es hombre
+            contador += 1
+    print("La cantidad de mujeres mayores de 17 es: ", contador)
 
 def opcion3():
     print("Has seleccionado la opción 3.")
@@ -40,7 +44,7 @@ def menu():
     if opcion == "1":
         opcion1(lista_datos)
     elif opcion == "2":
-        opcion2()
+        opcion2(lista_datos)
     elif opcion == "3":
         opcion3()
     elif opcion == "4":
